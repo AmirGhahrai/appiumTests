@@ -14,11 +14,6 @@ public class SearchTest extends BaseScenario {
     private static final String SEARCH_TERM = "Software testing";
     private static final String INVALID_SEARCH = "klhsdkalsf";
 
-    @BeforeMethod
-    public void startingPoint() throws Exception {
-        driver.navigate().to("http://0.0.0.0:4723/wd/hub");
-    }
-
     @Test(priority = 2)
     public void search_topic_should_return_relevant_article() throws Exception {
         SearchWidget searchWidget = new SearchWidget(driver);
