@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="scenarios.SearchTest" duration-ms="36661" started-at="2016-10-05T02:04:13Z" finished-at="2016-10-05T02:04:49Z">
+    <groups>
+    </groups>
+    <test name="Command line test" duration-ms="36661" started-at="2016-10-05T02:04:13Z" finished-at="2016-10-05T02:04:49Z">
+      <class name="scenarios.SearchTest">
+        <test-method status="PASS" signature="setup()" name="setup" is-config="true" duration-ms="4638" started-at="2016-10-05T02:04:13Z" finished-at="2016-10-05T02:04:17Z">
+        </test-method>
+        <test-method status="PASS" signature="startingPoint()" name="startingPoint" is-config="true" duration-ms="405" started-at="2016-10-05T02:04:17Z" finished-at="2016-10-05T02:04:18Z">
+        </test-method>
+        <test-method status="PASS" signature="invalid_search_should_return_no_results()" name="invalid_search_should_return_no_results" duration-ms="13812" started-at="2016-10-05T02:04:18Z" finished-at="2016-10-05T02:04:31Z">
+        </test-method>
+        <test-method status="PASS" signature="startingPoint()" name="startingPoint" is-config="true" duration-ms="404" started-at="2016-10-05T02:04:31Z" finished-at="2016-10-05T02:04:32Z">
+        </test-method>
+        <test-method status="PASS" signature="search_topic_should_return_relevant_article()" name="search_topic_should_return_relevant_article" duration-ms="16025" started-at="2016-10-05T02:04:32Z" finished-at="2016-10-05T02:04:48Z">
+        </test-method>
+        <test-method status="PASS" signature="tearDown()" name="tearDown" is-config="true" duration-ms="1374" started-at="2016-10-05T02:04:48Z" finished-at="2016-10-05T02:04:49Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>
