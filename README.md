@@ -22,7 +22,7 @@ Launch Android Virtual Device <br/>
        android avd -- create an android device (AVD Name: Nexus5v6) (Target: Android 6.0) (Device: Nexus 5) <br/>
 Launch device just created -- emulator @Nexus5v6<br/>
 
-Install Wikipedia app -- adb install <path_to_apk> (note the app is placed under the app folder in project root) <br/>
+Install Wikipedia app -- adb install path_to_apk (note the app is placed under the app folder in project root) <br/>
        
 Start appium server<br/>
        appium &
