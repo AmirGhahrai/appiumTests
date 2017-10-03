@@ -2,7 +2,7 @@
 
 Instructions to run the tests:
 
-Install Android SDK (brew install android-sdk)
+Install Android SDK (brew install Caskroom/cask/android-sdk)
 Install appium (npm install -g appium)
 
 set path for Java and Android in ~/.bash_profile
