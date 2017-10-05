@@ -27,8 +27,7 @@ public class BaseScenario {
         DesiredCapabilities dc = new DesiredCapabilities();
 
         dc.setCapability(MobileCapabilityType.PLATFORM_NAME, "Android");
-        dc.setCapability(MobileCapabilityType.PLATFORM_VERSION, 6.0);
-        dc.setCapability(MobileCapabilityType.DEVICE_NAME, "Nexus5v6");
+        dc.setCapability(MobileCapabilityType.DEVICE_NAME, "TestAvd");
         dc.setCapability(MobileCapabilityType.APP, app.getAbsolutePath());
         driver = new AndroidDriver(new URL("http://0.0.0.0:4723/wd/hub"), dc);
 
