@@ -17,11 +17,11 @@
 	PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 	PATH=$PATH:$JAVA_HOME/bin
 	
-N.B. Your .bash_profile should be in ~/.bash_profile
+N.B. Your .bash_profile should be in _~/.bash_profile
 
-If you don't have a .bash_profile then run this command to create it:   ** touch ~/.bash_profile **
+If you don't have a .bash_profile then run this command to create it: _touch ~/.bash_profile
 
-To edit your .bash_profile run:  ** sudo nano ~/.bash_profile **
+To edit your .bash_profile run: _sudo nano ~/.bash_profile **
 
 ### 4 - Install latest platform tools by running the following command in a terminal ###
 	sdkmanager "platform-tools" "platforms;android-26"
