@@ -1,31 +1,45 @@
 # appiumTests
 
-Instructions to run the tests:
+### 1 - Install latest Android SDK
+	https://developer.android.com/studio/install.html
 
-Install Android SDK (brew install Caskroom/cask/android-sdk)
-Install appium (npm install -g appium)
+### 2 - The installer will install Android SDK in the following location
+	/Users/<YOUR-USERNAME>/Library/Android/sdk
 
-set path for Java and Android in ~/.bash_profile
+### 3 - Edit your .bash_profile to have the following:
 
-.bash_profile should look like:
+	export ANDROID_HOME=/Users/<YOUR-USERNAME>/Library/Android/sdk
+	export ANDROID_SDK_ROOT=$ANDROID_HOME
+	export JAVA_HOME=$(/usr/libexec/java_home)
 
-export ANDROID_HOME=/usr/local/Cellar/android-sdk/24.4.1_1<br/>
-export PATH=$ANDROID_HOME/platform-tools:$PATH<br/>
-export PATH=$ANDROID_HOME/tools:$PATH<br/>
-export PATH=$PATH:$ANDROID_HOME/bin<br/>
-export JAVA_HOME=/Library/Java/Home<br/>
-export JAVA_HOME;<br/>
+	PATH=$PATH:$ANDROID_SDK_ROOT/tools/bin
+	PATH=$PATH:$ANDROID_SDK_ROOT/emulator
+	PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+	PATH=$PATH:$JAVA_HOME/bin
+	
+N.B. Your .bash_profile should be in ~/.bash_profile
 
-Launch Android SDK Manager<br/>
-       android sdk  -- install Android SDK Platform 6.0 (API 23)
-Launch Android Virtual Device <br/>
-       android avd -- create an android device (AVD Name: Nexus5v6) (Target: Android 6.0) (Device: Nexus 5) <br/>
-Launch device just created -- emulator @Nexus5v6<br/>
+If you don't have a .bash_profile then run this command to create it:   ** touch ~/.bash_profile **
 
-Install Wikipedia app -- adb install path_to_apk (note the app is placed under the app folder in project root) <br/>
-       
-Start appium server<br/>
-       appium &
+To edit your .bash_profile run:  ** sudo nano ~/.bash_profile **
 
-Run the tests<br/>
-mvn clean test
+### 4 - Install latest platform tools by running the following command in a terminal ###
+	sdkmanager "platform-tools" "platforms;android-26"
+
+### 5 - download necessary packages ###
+	sdkmanager "system-images;android-26;google_apis;x86"
+
+### 6 - Create an avd with a name TestAvd - Android Virtual Device ###
+	avdmanager create avd -n TestAvd -k "system-images;android-26;google_apis;x86" -d "Nexus 5X"
+
+### 7 - Launch the emulator to see if everything is working
+	emulator -avd TestAvd -skin 1440x2560
+
+### 8 - Now install appium
+	brew install appium
+	
+### 9 - Start the appium server by running the following command
+	appium
+
+### 10 - Run the tests from the project root (where pom.xml resides)
+	mvn clean test
