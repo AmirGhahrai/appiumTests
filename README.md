@@ -1,5 +1,10 @@
 # appiumTests
 
+This is an Appium starter project for mobile automation testing for both native and web view. It uses a sample app (Wikipedia) on an android emulator to run a basic search test. The idea is to show how to write automated tests for a mobile app using Appium.
+
+The project will automatically install the Wikipedia app on the virtual device which you will create in the following steps and then runs two search tests on the Wikipedia app.
+
+
 ### 1 - Install latest Android SDK
 	https://developer.android.com/studio/install.html
 
