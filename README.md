@@ -41,7 +41,7 @@ To edit your .bash_profile run: sudo nano ~/.bash_profile
 	emulator -avd TestAvd -skin 1440x2560
 
 ### 8 - Now install appium
-	brew install appium
+	npm install -g appium
 	
 ### 9 - Start the appium server by running the following command
 	appium
